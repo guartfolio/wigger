@@ -14,6 +14,7 @@
       position: relative;
       font-family: Arial, sans-serif;
     }
+
     #logo {
       position: absolute;
       top: 50px;
@@ -23,10 +24,12 @@
       animation: pulse .75s ease-in-out infinite alternate;
       z-index: 100;
     }
+
     @keyframes pulse {
       from { transform: translateX(-50%) scale(1); }
       to   { transform: translateX(-50%) scale(1.25) rotate(10deg); }
     }
+
     #wigger-form {
       position: absolute;
       top: 300px;
@@ -36,24 +39,30 @@
       max-width: 400px;
       padding: 20px;
       background-color: rgba(0,0,0,0.5);
-      border-radius: 8px;
+      border-radius: 12px;
+      box-sizing: border-box;
       z-index: 50;
     }
+
     #wigger-form label {
       display: block;
       margin-bottom: 5px;
       color: #fff;
       font-weight: bold;
     }
+
     #wigger-form input {
       width: 100%;
-      padding: 8px;
+      padding: 10px 12px;
       margin-bottom: 15px;
-      border: 1px solid #fff;
-      background-color: rgba(255,255,255,0.5);
+      border: none;
+      border-radius: 8px;
+      background-color: rgba(255,255,255,0.8);
       color: #000;
       font-size: 1em;
+      box-sizing: border-box;
     }
+
     #wigger-form button {
       width: 40%;
       display: block;
@@ -63,7 +72,9 @@
       border: none;
       font-size: 1em;
       cursor: pointer;
+      border-radius: 6px;
     }
+
     #ca {
       position: fixed;
       bottom: 50px;
@@ -75,6 +86,7 @@
       background: rgba(0,0,0,0.7);
       z-index: 200;
     }
+
     #copy-btn {
       position: fixed;
       bottom: 10px;
@@ -89,6 +101,7 @@
       cursor: pointer;
       box-shadow: 0 4px 6px rgba(0,0,0,0.5);
     }
+
     #copy-btn:active {
       box-shadow: inset 0 2px 4px rgba(0,0,0,0.7);
     }
@@ -119,12 +132,11 @@
   </form>
 
   <!-- Background music loop -->
-<audio loop autoplay>
-  <source src="wigg.mp3" type="audio/mpeg">
-</audio>
+  <audio loop autoplay>
+    <source src="wigg.mp3" type="audio/mpeg">
+  </audio>
 
-
-
+  <!-- Copy contract address button -->
   <button id="copy-btn">Copy CA:</button>
 
   <script>
